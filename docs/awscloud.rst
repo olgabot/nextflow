@@ -333,7 +333,19 @@ configure and launch the instance.
   large enough for the needs of your pipeline execution.
 
 When the instance is running, SSH into it, install the AWS CLI tools as explained below or any other required tool
-that may be required.
+that may be required. For example, here is how one would ssh into the AMI using a local key:
+
+
+        $ ssh -i ~/.ssh/aegea.build_ami.olgabot.Olgas-MacBook-Pro.pem ec2-user@ec2-52-12-178-15.us-west-2.compute.amazonaws.com
+
+           __|  __|  __|
+           _|  (   \__ \   Amazon ECS-Optimized Amazon Linux AMI 2018.03.q
+         ____|\___|____/
+
+        For documentation, visit http://aws.amazon.com/documentation/ecs
+        3 package(s) needed for security, out of 4 available
+        Run "sudo yum update" to apply all updates.
+        [ec2-user@ip-172-31-28-151 ~]$
 
 Also make sure the Docker configuration reflects the amount of storage you have specified when launching the instance
 as shown below::
